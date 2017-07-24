@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+button {
+	background-color: lime;
+	border: none;
+	color: white;
+	padding: 11px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-table;
+	font-size: 16px;
+}
+
+input[type=text] {
+	width: 10%;
+	padding: 8px 100px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+	<div align="center">
+		<div class=>
+			<div>
+				<br> <img
+					src="https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/SMS-512.png"
+					class="img-responsive"
+					style="width: 200px; height: 200px; margin: 0 auto;"><br>
+
+				<h1>Verify your mobile number</h1>
+
+				<table>
+					<tr>
+						<td>
+							<form method="post" id="veryfyotp" action="/VerifyOTP">
+								<div>
+									<div>
+										<span style="color: red;"></span> <input style="height: 40px;"
+											type="text" name="otp" placeholder="Enter your OTP number"
+											required="">
+										<button type="submit">Verify</button>
+									</div>
+								</div>
+							</form>
+						</td>
+					
+						<td>
+							<form action="/resendOTP">
+								<input type="image" name="submit"
+									src="C:/Users/basanta.kumar.hota/Desktop/resend.jpg" border="0"
+									alt="Submit" height="60px" width="100px" />
+								<p>RESEND OTP</p>
+							</form>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p style="align: center"></p>
+				<p style="color: navy; font-size: 20px; font-weight: bold;">An
+					OTP has been sent to your Mobile Number. Please enter the OTP below
+					for Successful Registration</p>
+				<p></p>
+				<br> <br> <br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+<script type="text/javascript">
+	function placeholderIsSupported() {
+		test = document.createElement('input');
+		return ('placeholder' in test);
+	}
+
+	$(document).ready(
+			function() {
+				placeholderSupport = placeholderIsSupported() ? 'placeholder'
+						: 'no-placeholder';
+				$('html').addClass(placeholderSupport);
+			});
+</script>
+</head>
+<body>
+	<div id="registration-form">
+		<div class='fieldset'>
+			<legend>Wanna be Cool?!</legend>
+			<form action="#" method="post" data-validate="parsley">
+				<div class='row'>
+					<label for='firstname'>First Name</label> <input type="text"
+						placeholder="First Name" name='firstname' id='firstname'
+						data-required="true"
+						data-error-message="Your First Name is required">
+				</div>
+				<div class='row'>
+					<label for="email">E-mail</label> <input type="text"
+						placeholder="E-mail" name='email' data-required="true"
+						data-type="email" data-error-message="Your E-mail is required">
+				</div>
+				<div class='row'>
+					<label for="cemail">Confirm your E-mail</label> <input type="text"
+						placeholder="Confirm your E-mail" name='cemail'
+						data-required="true"
+						data-error-message="Your E-mail must correspond">
+				</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
